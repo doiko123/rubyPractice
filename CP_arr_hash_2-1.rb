@@ -6,9 +6,9 @@
 # count(["a", "b", "c", "a", "b", "c"]) -> {"a"=>2, "b"=>2, "c"=>2}
 
 def count(array)
-  hash = Hash.new()
+  hash = {}
   narr = array.uniq  # 配列の重複を削除した配列narrを作成  
-  for s in narr do
+  narr.each do |s|
     hash[s] = array.count(s)  # narrの各値についてarray内での出現回数をcount～hashの値に代入
   end
   
