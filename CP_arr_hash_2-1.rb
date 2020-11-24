@@ -8,9 +8,9 @@
 def count(array)
   hash = {}
   narr = array.uniq  # 配列の重複を削除した配列narrを作成  
-  narr.each do |s|
-    hash[s] = array.count(s)  # narrの各値についてarray内での出現回数をcount～hashの値に代入
+  narr.each do |element|
+    hash[element] = array.count(element)  # narrの各値についてarray内での出現回数をcount～hashの値に代入
   end
   
-  return hash
+  hash
 end
